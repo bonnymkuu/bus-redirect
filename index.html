@@ -3,45 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="refresh" content="8;url=https://new-demo-website.netlify.app" />
+  <meta http-equiv="refresh" content="10;url=https://safiriexpress.netlify.app" />
   <title>Site Moved</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      background: white;
       color: #333;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
       text-align: center;
-      padding: 50px;
-    }
-    .container {
       max-width: 600px;
-      margin: auto;
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
     }
-    a {
-      color: #007bff;
+
+    .card h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #4f46e5;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .redirect-button {
+      display: inline-block;
+      background-color: #4f46e5;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
       text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .redirect-button:hover {
+      background-color: #3730a3;
+    }
+
+    .notice {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>We've Moved</h1>
+  <div class="card">
+    <h1>We've Moved!</h1>
     <p>
-      The content previously hosted on this website has been removed due to privacy policy concerns.
-      The company involved did not authorize the use of their name, and we have fully complied with their request.
+      The content previously hosted on this site was removed due to a privacy policy issue. We respected a company’s request not to use their name or materials without permission.
     </p>
     <p>
-      But don’t worry — you can still access a working demo on our new site:
+      You can still view the demo project on our new official site:
     </p>
-    <h2><a href="https://new-demo-website.netlify.app">Visit New Demo Website</a></h2>
-    <p>You will be automatically redirected in a few seconds...</p>
+    <a href="https://safiriexpress.netlify.app" class="redirect-button">Go to New Demo Site</a>
+    <div class="notice">Redirecting automatically in 10 seconds...</div>
   </div>
 </body>
 </html>
